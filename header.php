@@ -1,4 +1,4 @@
-<?php include ('action_login.php');?>
+<!-- <?php /*include ('action_login.php');*/?> -->
 
 <header id="header" class="header">
 

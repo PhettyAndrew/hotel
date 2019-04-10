@@ -2,7 +2,7 @@
 <?php include 'left_panel.php';?>
 
 <?php 
-$db_records=mysqli_query($conn,"SELECT * FROM admin") or die(mysqli_error());
+$db_records=mysqli_query($conn,"SELECT * FROM employee") or die(mysqli_error());
 ?>
 
 
@@ -56,11 +56,11 @@ $db_records=mysqli_query($conn,"SELECT * FROM admin") or die(mysqli_error());
         <div class="content mt-3">
             <div class="animated fadeIn">
                 <div class="row">
-                    <div class="col-sm-1"></div>
-                    <div class="col-sm-10">
+                    
+                    
                         <div class="card">
                             <div class="card-header">
-                                <strong class="card-title">Admin Table</strong>
+                                <strong class="card-title">Employee Table</strong>
                             </div>
                             <div class="card-body">
                                 <table class="table">
@@ -85,9 +85,9 @@ $db_records=mysqli_query($conn,"SELECT * FROM admin") or die(mysqli_error());
                                                 <td><?php echo $record['department'];?></td>
                                                 <td><?php echo $record['password'];?></td>
                                                 <td>
-                                                    <a href="view.php?id=<?php echo $record['id'];?>" class="btn btn-primary">View</a>
-                                                    <a href="update.php?id=<?php echo $record['id'];?>" class="btn btn-info">Update</a>
-                                                    <a href="delete.php?id=<?php echo $record['id'];?>" class="btn btn-danger">Delete</a>
+                                                    <a href="view_employee.php?id=<?php echo $record['id'];?>" class="btn btn-primary">View</a>
+                                                    <a href="update_employee.php?id=<?php echo $record['id'];?>" class="btn btn-info">Update</a>
+                                                    <a href="delete_employee.php?id=<?php echo $record['id'];?>" class="btn btn-danger">Delete</a>
                                                 </td>
                                             </tr>
                                             <?php
@@ -96,8 +96,7 @@ $db_records=mysqli_query($conn,"SELECT * FROM admin") or die(mysqli_error());
                                 </table>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-1"></div>
+                   
                         
                 </div>   
                 </div>

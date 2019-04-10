@@ -4,7 +4,7 @@ include('dbconnect.php');
 include('left_panel.php');
 
 
-$db_records=mysqli_query($conn,"SELECT * FROM employee") or die(mysqli_error());
+$db_records=mysqli_query($conn,"SELECT * FROM guest") or die(mysqli_error());
 ?>
 
 <meta charset="utf-8">
@@ -46,7 +46,7 @@ $db_records=mysqli_query($conn,"SELECT * FROM employee") or die(mysqli_error());
                     <div class="page-title">
                         <ol class="breadcrumb text-right">
                             <li><a href="content.php">Dashboard</a></li>
-                            <li class="active">Admin Table</li>
+                            <li class="active">Guest Table</li>
                         </ol>
                     </div>
                 </div>
@@ -85,9 +85,9 @@ $db_records=mysqli_query($conn,"SELECT * FROM employee") or die(mysqli_error());
                                                 <td><?php echo $record['department'];?></td>
                                                 <td><?php echo $record['password'];?></td>
                                                 <td>
-                                                    <a href="view.php?id=<?php echo $record['id'];?>" class="btn btn-primary">View</a>
-                                                    <a href="update.php?id=<?php echo $record['id'];?>" class="btn btn-info">Update</a>
-                                                    <a href="delete.php?id=<?php echo $record['id'];?>" class="btn btn-danger">Delete</a>
+                                                    <a href="view_guest.php?id=<?php echo $record['id'];?>" class="btn btn-primary">View</a>
+                                                    <a href="update_guest.php?id=<?php echo $record['id'];?>" class="btn btn-info">Update</a>
+                                                    <a href="delete_guest.php?id=<?php echo $record['id'];?>" class="btn btn-danger">Delete</a>
                                                 </td>
                                             </tr>
                                             <?php

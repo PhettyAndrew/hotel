@@ -16,12 +16,12 @@
 
                 <div class="row">
                     <form action="" method="POST">
-                        <div class="card">
+                    	<div class="card">
                                 <div class="card-header"><strong>Employee Registration</strong></div>
                                 <div class="card-body card-block">
                                     <div class="form-group">
-                                        <label for="full_name" class=" form-control-label">Full Name</label>
-                                        <input type="text"  placeholder="Full Name" class="form-control" required>
+                                    	<label for="full_name" class=" form-control-label">Full Name</label>
+                                    	<input type="text"  placeholder="Full Name" class="form-control" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="email" class=" form-control-label">Email</label>

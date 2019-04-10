@@ -6,7 +6,7 @@ include ('dbconnect.php');
 
 $id=$_GET['id'];
 
-$sql=mysqli_query($conn,"SELECT * FROM admin WHERE id='$id'")or die(mysqli_error($conn));
+$sql=mysqli_query($conn,"SELECT * FROM employee WHERE id='$id'")or die(mysqli_error($conn));
 while ($record=mysqli_fetch_assoc($sql)) {
 	$id=$record['id'];
 	$full_name=$record['full_name'];
@@ -76,12 +76,12 @@ while ($record=mysqli_fetch_assoc($sql)) {
             $gender=$_POST['gender'];
             $department=$_POST['department'];
             $password=$_POST['password'];
-            $sq=mysqli_query($conn,"UPDATE admin set full_name='$full_name',email='$email',department='$department',password='$password'where id='$id'")or die (mysqli_error($conn));
+            $sq=mysqli_query($conn,"UPDATE employee set full_name='$full_name',email='$email',department='$department',password='$password'where id='$id'")or die (mysqli_error($conn));
             if ($sq){
                 ?>
                  <script type="text/javascript">
                  window.alert('Update Successful');
-                 window.location.href='admin_table.php';
+                 window.location.href='employee_table.php';
                 </script>
                 <?php
 
@@ -89,7 +89,7 @@ while ($record=mysqli_fetch_assoc($sql)) {
                 ?>
                  <script type="text/javascript">
                  window.alert('Update Failed');
-                 window.location.href='update.php';
+                 window.location.href='update_employee.php';
                 </script>
                 <?php
             }
